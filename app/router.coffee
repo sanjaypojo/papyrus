@@ -1,3 +1,5 @@
+renderJade = require './renderJade'
+
 module.exports = () ->
   return (req, res, next) ->
-    next()
+    renderJade res, 'admin'
