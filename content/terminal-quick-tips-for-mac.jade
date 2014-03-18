@@ -1,0 +1,49 @@
+extends ../theme/layouts/post
+
+block content
+  :md
+    Terminal Quick Tips (for Mac)
+    ===============================
+
+    ####Open present path in finder
+      $ open .
+
+    ####Paste finder path in terminal
+    You can just drag the folder and drop it in terminal. Also, Alfred can copy the path to clipboard.
+
+    ####Display present terminal path
+      $ pwd
+
+    ----
+
+    ####Creating Stuff
+    1. Folder
+        `$ mkdir foldername`
+
+    2. File
+        `$ touch filename`
+
+    ####Deleting Stuff
+    1. Folder and everything it contains
+
+        $ rm -rf /insert/path/here
+
+    2. An empty folder
+
+        $ rmdir /insert/path/here
+
+    3. A file
+
+        $ rm /the/file/path
+
+    ####Running through history
+    1. Search command history (*very* useful)
+      `Ctrl` + `r` and then type a search string.
+
+    2. Previous commands - up and down arrows (duh)
+
+    ####Playing with files
+    1. Write output to a file
+      Use `>`
+
+          $ echo hello > abc

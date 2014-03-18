@@ -6,11 +6,13 @@
 			[
 				".gitignore",
 				"papyrus.sublime-project",
-				"readMe.md"
+				"readMe.md",
+				".gitmodules"
 			],
 			"folder_exclude_patterns":
 			[
-				"node_modules"
+				"node_modules",
+				"librarium"
 			],
 			"follow_symlinks": true,
 			"path": "."

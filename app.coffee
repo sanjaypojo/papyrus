@@ -5,6 +5,7 @@ app = connect()
 
 app
   .use connect.logger('tiny')
+  .use connect.static(__dirname + '/static/')
   .use papyrus.security.limit(2)
   .use quip
   .use papyrus.router()
