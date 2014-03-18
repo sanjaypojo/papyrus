@@ -1,0 +1,32 @@
+{
+  "name": "papyrus",
+  "version": "0.0.0",
+  "description": "A simple blogging engine",
+  "main": "app.coffee",
+  "scripts": {
+    "start": "nodemon app.coffee -e coffee,jade,js,less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanjaypojo/papyrus.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "blog",
+    "blogging",
+    "minimal",
+    "connect",
+    "js"
+  ],
+  "author": "sanjaypojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjaypojo/papyrus/issues"
+  },
+  "homepage": "https://github.com/sanjaypojo/papyrus",
+  "dependencies": {
+    "connect": "~2.14.2",
+    "quip": "~0.1.2"
+  }
+}
