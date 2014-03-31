@@ -8,7 +8,7 @@ app
   .use connect.static(__dirname + '/static/')
   .use papyrus.security.limit(2)
   .use quip
-  .use papyrus.router()
-  .use papyrus.router404()
+  .use papyrus.router
+  .use papyrus.router404
 
 app.listen(4000)
