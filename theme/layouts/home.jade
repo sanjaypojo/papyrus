@@ -3,4 +3,9 @@ html
     title Thoughtarium
     link(rel="stylesheet", type="text/css", href="css/style.css")
   body
-    h1 Thoughtarium
+    header
+      h1 Thoughtarium
+    main
+      each post in posts
+        h3 #{post.title}
+        p #{post.excerpt}
