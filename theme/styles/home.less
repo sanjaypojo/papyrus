@@ -1,0 +1,49 @@
+body.home{
+  header {
+    .breathe(0);
+    text-align: center;
+    background-color: @brand-black;
+    h1 {
+      color: @brand-white;
+      font-size: 4rem;
+      margin:0;
+      padding-top: 3rem;
+    }
+    h4 {
+      color: @brand-white;
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin: 0;
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+
+    }
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    .post {
+      .breathe(1rem, 1rem);
+      border-bottom: solid 1px fade(@brand-black, 20%);
+      .meta {
+        font-size: 0.8rem;
+        margin:0;
+        padding:0;
+        color: @brand-gray;
+      }
+      a {
+        color: @brand-black;
+        &:hover {
+          color: @link-hover-clr;
+        }
+        h3.title {
+          font-size: 1.6rem;
+          .breathe(0,0);
+        }
+        p.excerpt {
+          .breathe(0,0.5rem);
+        }
+      }
+    }
+  }
+}

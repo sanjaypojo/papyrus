@@ -1,10 +1,22 @@
 @import '../../librarium/styles/mixins';
 @import '../../librarium/styles/components';
 @import 'markdown';
+@import 'home';
+@import 'post';
 
-// pre {
-//   max-width: 50%;
-//   text-indent: 2rem;
-//   margin-left: 2rem;
-//   .rounded;
-// }
+// Colors
+@brand-black: #333;
+@brand-white: #fff;
+@brand-gray: #999;
+
+@link-clr: #339966;
+@link-hover-clr: lighten(@link-clr, 10%);
+
+// Fonts
+@brand-font: 'Open Sans';
+
+body {
+  font-family: @brand-font;
+  margin:0;
+  padding:0;
+}

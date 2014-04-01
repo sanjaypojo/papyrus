@@ -20,7 +20,7 @@ marked.setOptions(
 # Relies on a response object
 # Relies on correctly defining the path
 
-module.exports = (res, fileName, data) ->
+module.exports = (res, fileName, postData) ->
   fs.readFile 'content/'+ fileName + '.md', 'utf8', (err, mdContent) ->
     if err
       console.error 'File read failed', err
@@ -29,5 +29,5 @@ module.exports = (res, fileName, data) ->
       res,
       'post',
       renderedMarkdown: renderedMarkdown
-      bodyClass: 'markdown'
+      post: postData
     )

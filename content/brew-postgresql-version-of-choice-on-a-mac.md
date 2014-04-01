@@ -1,4 +1,4 @@
-# Brew PostgreSQL (version of choice) on a Mac
+# Install PostgreSQL (version of choice) on a Mac
 
 ## Installation
 1. First of all, you need to install brew.

@@ -2,10 +2,14 @@ html
   head
     title Thoughtarium
     link(rel="stylesheet", type="text/css", href="css/style.css")
-  body
+  body.home
     header
       h1 Thoughtarium
+      h4 Ideas brewed like filter coffee
     main
       each post in posts
-        h3 #{post.title}
-        p #{post.excerpt}
+        .post
+          p.meta= post.date.fromNow()
+          a(href="/#{post.url}")
+            h3.title #{post.title}
+            p.excerpt #{post.excerpt}

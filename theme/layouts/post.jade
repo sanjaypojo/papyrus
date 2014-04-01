@@ -3,11 +3,15 @@ html
     title Thoughtarium
     link(rel="stylesheet", href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night-bright.min.css")
     link(rel="stylesheet", type="text/css", href="css/style.css")
-  body(class="#{bodyClass}")
+  body.single-post
     header
-      h1 Thoughtarium
+      a(href="/")
+        h1 Thoughtarium
     main
-      div !{renderedMarkdown}
+      .meta= post.date.format("dddd, do MMM 'YY")
+      .title
+        h1= post.title
+      .markdown !{renderedMarkdown}
 
   script.
     document.onreadystatechange = function() {
