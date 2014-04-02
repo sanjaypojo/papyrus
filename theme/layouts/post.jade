@@ -1,17 +1,18 @@
 html
   head
-    title Thoughtarium
+    title Thoughtarium | #{post.categories[0]}
     link(rel="stylesheet", href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night-bright.min.css")
     link(rel="stylesheet", type="text/css", href="css/style.css")
   body.single-post
-    header
-      a(href="/")
-        h1 Thoughtarium
+    - if(post.headerImage) {
+      img.title-image(src="images/#{post.headerImage}")
+    - }
     main
-      .meta= post.date.format("dddd, do MMM 'YY")
-      .title
+      section.title
         h1= post.title
-      .markdown !{renderedMarkdown}
+        .brief: p= post.excerpt
+        h5.post-date= post.date.format("dddd, Do MMM 'YY")
+      section.markdown !{renderedMarkdown}
 
   script.
     document.onreadystatechange = function() {

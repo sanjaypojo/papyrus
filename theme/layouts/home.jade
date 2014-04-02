@@ -9,7 +9,7 @@ html
     main
       each post in posts
         .post
-          p.meta= post.date.fromNow()
           a(href="/#{post.url}")
-            h3.title #{post.title}
-            p.excerpt #{post.excerpt}
+            h5.meta= post.date.fromNow()
+            h2 #{post.title}
+            p #{post.excerpt}

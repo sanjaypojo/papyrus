@@ -1,0 +1,104 @@
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Oxygen:700|Raleway:200);
+@body-font: 'Raleway';
+@header-font: 'Oxygen';
+@base-font-size: 20;
+@rhythm: 1.5rem;
+
+.fontify-header(@scale, @base) {
+  font-size: @scale * @base;
+  line-height: ceil(@scale * @base * 4 / @rhythm)*0.25*@rhythm;
+}
+
+.hug {
+  margin-top: @rhythm/4;
+}
+
+.meta {
+  color: @brand-gray-light;
+}
+
+html {
+  font-size: (@base-font-size/16)*100%;
+  font-family: @brand-font;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @header-font;
+  color: @brand-black;
+  text-rendering: optimizeLegibility;
+  margin-top: @rhythm;
+  margin-bottom: 0;
+}
+
+h1 { .fontify-header(5.0, 0.6rem); }
+h2 { .fontify-header(3.5, 0.6rem); }
+h3 { .fontify-header(2.5, 0.6rem); }
+h4 { .fontify-header(2.0, 0.6rem); }
+h5 { .fontify-header(1.5, 0.6rem); }
+h6 { .fontify-header(1.0, 0.6rem); }
+
+p {
+  margin-top: @rhythm;
+  margin-bottom: 0;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p {
+  .hug;
+}
+
+ul, ol {
+  margin-top: @rhythm;
+  margin-bottom: @rhythm;
+
+  li {
+    line-height: @rhythm;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: none;
+  li:before {
+    display: inline-block;
+    content: "–";
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+blockquote {
+  line-height: @rhythm;
+  margin-top: @rhythm;
+  margin-bottom: @rhythm;
+  border-left: solid 2px @brand-green;
+  margin-left: 2rem;
+}
+
+code {
+  font-size: @base-font-size;
+  padding: 0 0.5rem;
+  white-space: pre;
+  .rounded;
+  border: 1px solid @brand-gray;
+  background-color: @brand-gray-lighter;
+}
+
+pre {
+  background-color: #121;
+  .rounded;
+  .breathe(@rhythm);
+  code {
+    vertical-align: bottom;
+    padding: 0;
+    white-space: pre-line;
+    border: none;
+    background-color: transparent;
+  }
+}

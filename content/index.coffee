@@ -29,6 +29,33 @@ blogData =
         categories: ["Developer", "Hardware"]
         excerpt: "Running a webserver on my tiny PC on a board.
           Only because the cubietruck is useless as a media centre."
+      ,
+        title: "Buy Air or New Gen Pro. Don't get trapped in the middle."
+        date: moment("2012-07-02")
+        fileName: "macbook-pro-retina-2012"
+        url: "macbook-pro-retina-2012"
+        tags: ["apple", "macbook", "macbook air", "macbook pro retina"]
+        categories: ["Apple", "Hardware"]
+        excerpt: "My take on Apple's new product line (2012).
+          SSD is the way to go my friends!"
+      ,
+        title: "Postgres Cheat Sheet"
+        date: moment("2014-03-11")
+        fileName: "postgres-cheat-sheet"
+        url: "postgres-cheat-sheet"
+        tags: ["database", "postgres", "postgresql", "cheatsheet", "postgres 9.x"]
+        categories: ["Developer", "Database"]
+        excerpt: "A quick reference to postgreSQL 9.x syntax"
+      ,
+        title: "Setting up my Mac for development - 1"
+        date: moment("2013-12-29")
+        fileName: "setting-up-my-mac-for-development-1"
+        url: "setting-up-my-mac-for-development-1"
+        tags: ["mac", "development", "set up", "web development", "sublime text", "homebrew"]
+        categories: ["Developer", "Set Up"]
+        headerImage: "header-macSetup.jpg"
+        excerpt: "Getting started with development on your Mac.
+          Homebrew and Sublime Text to the rescue!"
     ]
 
 # Sort posts as most recent first

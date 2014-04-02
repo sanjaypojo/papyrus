@@ -10,6 +10,10 @@ src =
   static: 'static/*/*'
   css: 'static/css/'
   js: 'static/js/'
+  images: 'static/images/'
+  content:
+    posts: 'content/*'
+    images: 'content/images/*'
 
 # DEVELOPMENT
 gulp.task 'devClean', () ->
@@ -28,10 +32,16 @@ gulp.task 'devScripts', () ->
     .on('error', plugins.util.log)
     .pipe gulp.dest(src.js)
 
+gulp.task 'devImages', () ->
+  return gulp.src(src.content.images)
+    .pipe plugins.imagemin()
+    .pipe gulp.dest(src.images)
+
 # Watch
 gulp.task 'watch', () ->
   gulp.watch src.less, ['devStyles']
   gulp.watch src.scripts, ['devScripts']
+  gulp.watch src.content.images, ['devImages']
 
 # Default
 gulp.task 'default', ['devClean'], () ->
