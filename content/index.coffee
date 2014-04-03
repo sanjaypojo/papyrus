@@ -3,6 +3,15 @@ moment = require 'moment'
 blogData =
   posts:
     [
+        title: "Javascript Cheatsheet"
+        date: moment("2014-04-04")
+        fileName: "javascript-types-cheat-sheet"
+        url: "javascript-types-cheat-sheet"
+        tags: ["developer", "javascript", "web", "nodejs", "cheatsheet"]
+        categories: ["Developer", "JS"]
+        excerpt: "A detailed cheatsheet that covers the
+          nitty-gritties of the 6 types of values in javascript."
+      ,
         title: "Terminal Quick Tips for Mac"
         date: moment("2013-12-17")
         fileName: "terminalQuickTips"
