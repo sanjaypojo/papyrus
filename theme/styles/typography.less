@@ -84,7 +84,7 @@ blockquote {
 code {
   font-size: @base-font-size;
   padding: 0 0.5rem;
-  white-space: pre;
+  white-space: pre-wrap;
   .rounded;
   border: 1px solid @brand-gray;
   background-color: @brand-gray-lighter;
@@ -93,11 +93,12 @@ code {
 pre {
   background-color: #121;
   .rounded;
-  .breathe(@rhythm);
+  .breathe(@rhythm/2);
+  margin-bottom: @rhythm;
   code {
     vertical-align: bottom;
     padding: 0;
-    white-space: pre-line;
+    white-space: pre-wrap;
     border: none;
     background-color: transparent;
   }
