@@ -45,9 +45,32 @@ body.home{
 }
 
 body.single-post {
-  header {}
+  nav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: fade(#fff, 50%);
+    border: solid 2px @brand-blue;
+    border-radius: 100%;
+    line-height: 1;
+    padding: 0.3rem;
+    a {
+      color: @brand-blue;
+      &:hover {
+        color: @brand-white;
+      }
+    }
+    &:hover {
+      background-color: @brand-blue;
+      cursor: pointer;
+      a {
+        color: @brand-white;
+      }
+    }
+  }
   img.title-image { width: 100%; }
   main {
+    padding-left: 4rem;
     margin: 0 auto;
     max-width: 720px;
     .breathe(@rhythm);
@@ -58,6 +81,41 @@ body.single-post {
       h5.post-date {
         color: @brand-green;
       }
+    }
+  }
+}
+
+footer {
+  .breathe(0, 2*@rhythm);
+  margin-top: @rhythm;
+  text-align: center;
+  background-color: @brand-black;
+  .container{
+    margin: 0 auto;
+    max-width: 500px;
+    .clearfix;
+    a {
+      color: @brand-yellow;
+    }
+    h5 {
+      color: @brand-white;
+      margin-bottom: 0;
+    }
+    .photo {
+      float:left;
+      border-radius: 100%;
+      height: 100px;
+      width: 100px;
+      background-image: url("/images/sanjaypojo.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    p.small {
+      color:@brand-white;
+      font-size: 0.7rem;
+      max-width: 500px;
+      margin-top: 0;
     }
   }
 }
