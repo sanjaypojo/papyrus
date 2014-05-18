@@ -34,6 +34,7 @@ Restrict column values to a list
     CREATE TABLE sometable (
         colors TEXT CHECK (colors IN ('red', 'green', 'blue'))
     )
+    -- Note: Double quotes won't work (they'll look for a field)
 
 ### Data Types
 Commonly used datatypes
