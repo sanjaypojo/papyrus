@@ -21,6 +21,7 @@ Modify a column
 	ALTER TABLE distributors
     ALTER COLUMN address TYPE varchar(80),
     ALTER COLUMN name SET NOT NULL,
+    ALTER COLUMN gender DROP NOT NULL,
     ALTER COLUMN phone TYPE numeric(12) USING phone::numeric ;
 
 Delete a column
