@@ -10,6 +10,16 @@ Select statement
 	GROUP BY year
 	ORDER BY title;
 
+### Funky Joins
+    SELECT
+        t1.id, t1.image_link, t1.title, t1.source_url,
+        array_agg(t2.tag_phrase)
+    FROM holymonkey t1
+    LEFT JOIN tagtable t2 ON t1.id = t2.tag_id
+    WHERE (SELECT id from holymonkey where domain='google.com')
+    GROUP BY t1.id
+    ORDER BY t1.id ASC
+
 ### Modify Table
 Add a column
 
