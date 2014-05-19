@@ -1,6 +1,6 @@
 # Postgres Cheat Sheet
 
-Just a quick reference for postgres - datatypes, queries, other tips and tricks.
+Just a quick reference for postgres - datatypes, queries, other random code snippets.
 
 ### Query Information
 Select statement
