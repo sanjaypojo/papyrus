@@ -1,0 +1,29 @@
+html
+  head
+    title Thoughtarium | #{post.categories[0]}
+    link(rel="stylesheet", href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night-bright.min.css")
+    link(rel="stylesheet", type="text/css", href="css/style.css")
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
+  body.single-post
+    nav
+      a(href="/")
+        i.fa.fa-home.fa-2x
+    - if(post.headerImage) {
+      img.title-image(src="images/#{post.headerImage}")
+    - }
+    main
+      section.title
+        h1= post.title
+        .brief: p= post.excerpt
+        h5.post-date= post.date.format("dddd, Do MMM 'YY")
+      section.markdown !{renderedMarkdown}
+    include ./footer
+  script.
+    document.onreadystatechange = function() {
+      if (document.readyState === 'complete') {
+        var elems = document.getElementsByTagName('pre');
+        for (var i = 0; i < elems.length; ++i) {
+          elems[i].classList.add('hljs');
+        }
+      }
+    };
