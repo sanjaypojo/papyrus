@@ -46,7 +46,6 @@
     "coffee-script": "~1.7.1",
     "marked": "~0.3.2",
     "highlight.js": "~8.0.0",
-    "moment": "~2.5.1",
-    "connect-sqlite3": "~0.9.2",
+    "moment": "~2.5.1"
   }
 }
