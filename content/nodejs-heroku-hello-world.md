@@ -8,7 +8,10 @@ If you know how to browse folders and files in the command line, you're good to 
 Most of the stuff works in windows to, but you'll need to figure out how to install git, and change the direction of the slashes and stuff :p
 
 ### Heroku
-Think of heroku as a super convenient way to deploy your developer doodles and see them online. So first of you need to create a heroku account [here](http://heroku.com). Once you're done signing up, you'll be taken to your dashboard page. On this dashboard page, click on 'create a new app'. Give your app a name and create it. Once you do, you'll have a pop up like this ![](images/heroku-new-app.png)
+Think of heroku as a super convenient way to deploy your developer doodles and see them online. So first of you need to create a heroku account [here](http://heroku.com). Once you're done signing up, you'll be taken to your dashboard page. On this dashboard page, click on 'create a new app'. Give your app a name and create it. Once you do, you'll have a pop up like this
+
+![](images/heroku-new-app.png)
+
 This is very useful, so leave this tab open, and go to your command line. It's time to use git.
 
 ### Git
