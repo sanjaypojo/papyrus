@@ -312,6 +312,9 @@ body.home header {
   padding-bottom: 3rem;
   text-align: center;
   background-color: #333333;
+  background-image: url(../images/mainCover-active.jpg);
+  background-size: cover;
+  min-height: 30%;
 }
 body.home header h1 {
   color: #ffffff;
