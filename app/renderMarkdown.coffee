@@ -12,8 +12,8 @@ marked.setOptions(
   sanitize: true,
   smartLists: true,
   smartypants: false,
-  highlight: (code) ->
-    return hljs.highlightAuto(code).value
+  # highlight: (code) ->
+  #   return hljs.highlightAuto(code).value
 )
 
 # Relies on existence of quip in middleware
