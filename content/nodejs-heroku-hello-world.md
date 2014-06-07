@@ -12,13 +12,7 @@ Think of heroku as a super convenient way to deploy your developer doodles and s
 This is very useful, so leave this tab open, and go to your command line. It's time to use git.
 
 ### Git
-Git (or some form of version control), is very important in any developer's workflow. So you might as well start now. What is git? To really over simplify things, any folder on your computer can be version controlled by "git initializing" that folder. Once you do, git will track changes in that folder (which we shall now call a 'repository').
-
-But that's not all. Git also has the ability to "push" this repository up to a "remote" server. And it has the ability to "pull" this repository down from a remote server and merge any changes between your local repository and this remote. So, basically, git allows you to track changes in your repository, push them up to the cloud, where someone else can then pull down this repository, make some changes and push it back up, and then you can pull down this new and updated repository. And it does a great job of merging stuff, making sure you don't lose your work etc. So you can imagine the power of git when you're working in a team.
-
-But for today, we're just going to use git solo. Which means, no need to merge or do anything fancy. We're going to create a folder with our code. We're then going to use git to push this code to a "remote" server on Heroku. And as soon as you push stuff to heroku, it'll make it available at a url - `http://myappname.herokuapp.com`, so your hardwork is now visible on the web!
-
-First off, check if git is already installed on your computer. Fire up terminal (or whatever shell you use) and run this.
+Git is our version control system, and it plays well with Heroku. First off, check if git is already installed on your computer. Fire up terminal (or whatever shell you use) and run this.
 
     git --version
 
@@ -57,7 +51,7 @@ Check if your install worked
 
     node --version
 
-That should output something like `v0.10.25`. Please note you might have to use `nodejs --version` in some cases.
+That should output something like `v0.10.25`. Please note you might have to use `nodejs --version` in some cases. Also run `npm --version`. This is node's own package manager, and is super useful.
 
 ### Your First Node server
 Create a file in your repository and call it `web.js`
@@ -76,4 +70,37 @@ Now in this file, stick in this simple code.
 
 Create another file in our repository and call it `Procfile`. Stick in this single line. This is basically an instruction to Heroku on how to run our node server.
 
-    web: node app.js
+    web: node web.js
+
+Now we have a git repository containing some Node JS code and we're almost ready to deploy it on the web. But there's one last step. Go back to the command line and type this.
+
+    npm init
+
+Just keep hitting enter as it runs you through the options. This will create a `package.json` file for you that contains the name of your app, and will eventually content all your apps dependencies. At present, you have no dependencies, but heroku still needs this file to be present.
+
+### Back to git
+Now we go back to our shell and to our project folder. Type `git status`. You should see something like this (unless you're in the wrong folder!).
+
+    On branch master
+    Initial commit
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+        Procfile
+        web.js
+        package.json
+    nothing added to commit but untracked files present (use "git add" to track)
+
+Now we need to commit our changes. Do the following -:
+
+    git add .
+    git commit -a -m "Initial Commit: Node hello world app"
+
+Now we need to push our changes up to heroku! Go back to that open tab of yours and copy the git url. Use the command below, but make sure you replace my git url with yours -:
+
+    git remote add heroku git@heroku.com:zen-node-tutorial.git
+
+Now you've told git where to push the app. All that's left to do is to actually push it!
+
+    git push heroku master
+
+And you're done. Go to the project url [](http://zen-node-tutorial.herokuapp.com/) in my case, and you can see your hello world app in action!
