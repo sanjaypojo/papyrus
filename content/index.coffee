@@ -3,6 +3,15 @@ moment = require 'moment'
 blogData =
   posts:
     [
+        title: "A NodeJS 'Hello World' Tutorial using Heroku"
+        date: moment("2014-06-07")
+        fileName: "nodejs-heroku-hello-world"
+        url: "nodejs-heroku-hello-world"
+        tags: ["developer", "javascript", "web", "nodejs", "tutorial"]
+        categories: ["Developer", "JS"]
+        excerpt: "Create a simple hello world web page
+          that you can actually visit on your browser using NodeJS."
+      ,
         title: "Javascript Cheatsheet"
         date: moment("2014-04-04")
         fileName: "javascript-types-cheat-sheet"
