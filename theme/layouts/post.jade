@@ -19,11 +19,11 @@ html
       section.markdown !{renderedMarkdown}
     include ./footer
   script.
-    document.onreadystatechange = function() {
-      if (document.readyState === 'complete') {
-        var elems = document.getElementsByTagName('pre');
-        for (var i = 0; i < elems.length; ++i) {
-          elems[i].classList.add('hljs');
-        }
-      }
-    };
+    //- document.onreadystatechange = function() {
+    //-   if (document.readyState === 'complete') {
+    //-     var elems = document.getElementsByTagName('pre');
+    //-     for (var i = 0; i < elems.length; ++i) {
+    //-       elems[i].classList.add('hljs');
+    //-     }
+    //-   }
+    //- };
