@@ -50,3 +50,48 @@ The last step is disabling root access using passwords on the server. To do this
     sudo nano /etc/ssh/sshd_config
 
 Change this line from `PermitRootLogin yes` to `PermitRootLogin without-password`. Then run `reload ssh`.
+
+### Install stuff
+First, we make sure everything is up to date.
+
+    sudo apt-get update
+    sudo apt-get upgrade
+
+Next we install git
+
+    sudo apt-get install git
+
+Next we install node. You can test the install by checking node version and npm version.
+
+    sudo apt-get install nodejs nodejs-legacy npm
+
+Next we install coffeescript and forever using npm.
+
+    sudo npm install coffee-script forever -g
+
+Finally we install nginx
+
+    sudo apt-get install nginx
+
+Now we can map a domain to a service (node server on forever) using nginx
+
+    sudo nano /etc/nginx/conf.d/example.com.conf
+
+And paste in this code (remember to modify PORT to the port for your Node JS app)
+
+    server {
+        listen 80;
+
+        server_name your-domain.com;
+
+        location / {
+            proxy_pass http://localhost:{YOUR_PORT};
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
+
+Finally uncomment `server_names_hash_bucket_size 64;` in the http section of the nginx config file found here - `/etc/nginx/nginx.conf`
