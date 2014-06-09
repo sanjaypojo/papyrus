@@ -6,6 +6,7 @@ This tutorial assumes you have root access (via SSH) to your server. A Digital O
 
 ### A New User
 I always do these 5 things immediately. Don't skip 4, or you might get locked out!
+
 1. Create a new user
 2. Give the user sudo access
 3. Add SSH keys for easy log in
