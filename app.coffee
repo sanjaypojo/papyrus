@@ -3,6 +3,8 @@ connect = require 'connect'
 papyrus = require './app/index'
 app = connect()
 
+global.__sRoot = __dirname
+
 app
   .use connect.logger('tiny')
   .use connect.static(__dirname + '/static/')

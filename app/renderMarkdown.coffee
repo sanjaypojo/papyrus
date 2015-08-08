@@ -21,7 +21,7 @@ marked.setOptions(
 # Relies on correctly defining the path
 
 module.exports = (res, fileName, postData) ->
-  fs.readFile 'content/'+ fileName + '.md', 'utf8', (err, mdContent) ->
+  fs.readFile "#{__sRoot}/content/#{fileName}.md", 'utf8', (err, mdContent) ->
     if err
       console.error 'File read failed', err
     renderedMarkdown = marked(mdContent)
