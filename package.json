@@ -1,6 +1,6 @@
 {
   "name": "papyrus",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple blogging engine",
   "main": "app.coffee",
   "scripts": {
