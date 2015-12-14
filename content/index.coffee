@@ -3,6 +3,23 @@ moment = require 'moment'
 blogData =
   posts:
     [
+        title: "Coffeescript code guide"
+        date: moment("2015-05-10")
+        fileName: "coffee-code-conventions"
+        url: "coffee-code-conventions"
+        tags: ["developer", "coffeescript", "web", "JS", "code"]
+        categories: ["Developer", "JS"]
+        excerpt: "Coffeescript code conventions I try to use."
+      ,
+        title: "Clone Magento from Production to your Local Machine"
+        date: moment("2014-08-05")
+        fileName: "clone-magento-from-production"
+        url: "clone-magento-from-production"
+        tags: ["developer", "magento", "web", "MAMP", "PHP", "e-commerce"]
+        categories: ["Developer", "Magento"]
+        excerpt: "Eliminate all the vague problems you encounter
+          when cloning your magento environment."
+      ,
         title: "Linux Server Set Up - To Do List"
         date: moment("2014-06-09")
         fileName: "web-server-to-do-list"
