@@ -3,6 +3,15 @@ moment = require 'moment'
 blogData =
   posts:
     [
+        title: "The Food Ritual"
+        date: moment("2014-08-27")
+        fileName: "the-food-ritual"
+        url: "the-food-ritual"
+        tags: ["life", "india", "food", "traditions"]
+        categories: ["Life", "India"]
+        headerImage: "food-ritual.jpg"
+        excerpt: "Finish that South Indian meal perfectly."
+      ,
         title: "Coffeescript code guide"
         date: moment("2015-05-10")
         fileName: "coffee-code-conventions"
