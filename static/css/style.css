@@ -334,6 +334,9 @@ body.home main .post {
   padding-bottom: 1.5rem;
   border-bottom: solid 1px #eeeeee;
 }
+body.home main .post:last-child {
+  border-bottom: none;
+}
 body.home main .post a {
   color: #333333;
 }

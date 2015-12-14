@@ -37,6 +37,9 @@ body.home{
     .post {
       .breathe(0, @rhythm);
       border-bottom: solid 1px @brand-gray-lighter;
+      &:last-child {
+        border-bottom: none;
+      }
       a {
         color: @brand-black;
         &:hover {
