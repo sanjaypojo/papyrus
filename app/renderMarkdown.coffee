@@ -5,15 +5,15 @@ fs = require 'fs'
 
 marked.setOptions(
   renderer: new marked.Renderer(),
-  gfm: false,
+  gfm: true,
   tables: true,
   breaks: false,
   pedantic: false,
   sanitize: true,
   smartLists: true,
   smartypants: false
-  # highlight: (code) ->
-  #   return hljs.highlightAuto(code).value
+  highlight: (code) ->
+    return hljs.highlightAuto(code).value
 )
 
 # Relies on existence of quip in middleware
