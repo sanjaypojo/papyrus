@@ -3,6 +3,14 @@ moment = require 'moment'
 blogData =
   posts:
     [
+        title: "Install fonts on Ubuntu Server"
+        date: moment("2016-03-07")
+        fileName: "ubuntu-font-install"
+        url: "ubuntu-font-install"
+        tags: ["developer", "ubuntu", "fonts", "wkhtmltopdf"]
+        categories: ["Developer", "Linux"]
+        excerpt: "Because life be boring without typography."
+      ,
         title: "The Food Ritual"
         date: moment("2014-08-27")
         fileName: "the-food-ritual"
